@@ -55,7 +55,7 @@ app.post('/api/shorturl', function(req, res) {
   })
 });
 
-app.get("/api/short_url/:short_url", async (req, res) => {
+app.get("/api/shorturl/:short_url", async (req, res) => {
 
   const ans = await collection.findOne({ short_url: +req.params.short_url });
   res.redirect(ans.original_url);
